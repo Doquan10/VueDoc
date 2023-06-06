@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- ** vue ile html e data gönderme
+             ** buton ile fonksiyona parametre gönderme
+             ** buton ile yazı değiştirme 
+             ** koordinat bilgisi alıp başlığa yazdırma
+             ** html içinde başka fonksiyonu kullanma-->
+      {{changeTitle('app.js içindeki fonksiyonları kullanabiliriz')}}
+      <h1>{{title}}</h1>
+      <p>{{desc}}</p>
+      <!-- v-bind kullanmak zorunda değiliz : yeterli olur -->
+      <a
+        v-bind:target="eduflow.target"
+        :href="eduflow.url"
+        v-bind:alt="eduflow.alt"
+        v-bind:dogukan="owner"
+        >{{eduflow.title}}</a
+      >
+      <br />
+      <br />
+      <button @click="changeTitle('Bu 1. Buton')">Title Değiştir</button>
+      <button v-on:click="changeTitle('Bu 2. Buton')">Title Değiştir</button>
+
+      <div
+        class="box"
+        @mousemove="updateCoords('mouseMove', $event)"
+        @click="changeTitle('Box Üzerinden gelen')"
+      ></div>
+      <span>{{coords.x}},{{coords.y}}</span>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    
+
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!--
+        ** offset sağdan ve soldan o kadar boşluk bırakacak anlamına geliyor.
+        ** v-model ile çok daha kısa şekilde veri alabiliriz.
+       -->
+
+      <div class="row mt-5">
+        <div class="col-4 offset-4">
+
+          <h3 class="text-center">Event</h3>
+         <!--
+          <input @input="updateValue" type="text" :value="fullName"class="form-control" />
+         --> 
+         <input @input="fullName = $event.target.value" type="text" :value="fullName"class="form-control" />
+
+         <input v-model="fullName" type="text" class="form-control" />
+
+          {{fullName}}
+          <br>
+          <button class="btn btn-primary btn-sm">Ekle</button>
+        </div>
+       
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
