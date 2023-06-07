@@ -9,6 +9,7 @@ const app = Vue.createApp({
     methods: {
 
         dec() {
+
             this.counter++;
         },
         inc() {
