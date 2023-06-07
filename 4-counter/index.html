@@ -18,6 +18,8 @@
     <!--
   ** justify-content grid ögelerini ortalar
   ** counter fonksiyonuna gerek yok click ile yapmak yeterli olur
+  ** her aksiyonda iki fonksiyon da çalışmaması için "computed" yapısı 
+     kullanılır ve html kısmında normal değişken gibi yazılır. Bunun adı reactivity dir.
 -->
     <div class="container">
       <div class="row mt-5">
@@ -26,10 +28,10 @@
           <div class="class d-flex justify-content-center align-items-center">
             <button @click="counter++" class="btn btn-sm btn-primary">+</button>
             <button @click="inc" class="btn btn-sm btn-danger">-</button>
-          </div>
+          </div> 
           <div class="class alert alert-warning">
             {{
-            getCounterResult()
+            getCounterResult
             }}
           </div>
         </div>
@@ -41,7 +43,7 @@
           </div>
           <div class="class alert alert-warning">
             {{
-            getCounter2Result()
+            getCounter2Result
             }}
           </div>
         </div>
