@@ -10,7 +10,7 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css" />
   <title>Document</title>
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="/vue.js"></script>
 </head>
 
 <body >
@@ -20,15 +20,24 @@
     <h1 v-if="!showContainer" class="text-danger">Başlangıçta gözükecek</h1>
     <h1 v-else="showContainer" class="text-primary">Sonra gözükecek</h1>
     <br>
-    <h3 :style="{backgroundColor: 'green' :counter > 0}">{{counter}}</h3>
+    <h3 :style="counter > 0 ? { 'background-color': 'green'} : ''">{{counter}}</h3>
     <button class="btn btn-sm btn-success" @click="counter++">Arttır</button>
     <button class="btn btn-sm btn-warning" @click="counter--">Azalt</button>
     <p v-if="counter < 0">Counter Negatif</p>
     <p v-else-if="counter > 0">Counter Pozitif</p>
     <p v-else="counter == 0">Counter 0</p>
+
+    <hr>
+
+    <p v-show="counter < 0">Counter Negatif</p>
+    <p v-show="counter > 0">Counter Pozitif</p>
+    <p v-show="counter == 0">Counter 0</p>
+
   </div>
 
   <script src="app.js"></script>
+  
+
 </body>
 
 </html>
