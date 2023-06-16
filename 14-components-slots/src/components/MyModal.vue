@@ -5,7 +5,7 @@
     </div>
     <hr />
     <div class="content my-2">
-      <slot name="content" />
+      <slot name="content"/>
     </div>
     <slot />
     <hr />
