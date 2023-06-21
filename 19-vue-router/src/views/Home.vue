@@ -5,7 +5,8 @@
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur dignissimos accusantium nam maxime doloremque ab consequatur culpa ipsa
       consectetur earum neque, in deserunt suscipit animi facilis, voluptatum adipisci odit hic!
     </p>
-    <input type="text" @keydown.enter="goToDetails" />
+    <input v-model="userID" type="text" @keydown.enter="goToDetails" />
+    <input v-model="name" type="text" @keydown.enter="goToDetails" />
   </template>
   
   <script>
@@ -17,11 +18,12 @@
         this.$router.push({
           name: "DetailPage",
           params: {
-            userID: e.target.value
+            userID: e.target.value,
+            name : "dogukan"
           },
           query: {
             type: "DetailAuth",
-            user: "tayfunerbilen"
+            user: "secsec"
           }
         });
       }

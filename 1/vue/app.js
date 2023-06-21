@@ -1,8 +1,10 @@
 const app = Vue.createApp({
     data(){
+
         return{
             todoText: null,
             todoList:[],
+            
 
         };
     },

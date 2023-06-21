@@ -11,13 +11,13 @@ const routes = [
     name: "AboutPage",
     path: "/hakkimda",
     // component : Home
-   // component: () => import("@/views/About")
+    component: () => import("@/views/About")
   },
   {
     name: "DetailPage",
-    path: "/detay/:userID",
+    path: "/detay/:userID/:name",
     // component : Home
-   // component: () => import("@/views/Details")
+    component: () => import("@/views/Details")
   }
 ];
 
