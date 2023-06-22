@@ -10,11 +10,22 @@
   </template>
   
   <script>
+  
   export default {
+   data() {
+    return {
+      userID: null,
+      name: null
+    }
+   },
     methods: {
+    
       goToDetails(e) {
-        // alert(e.target.value);
-        // this.$router.push(`/detay/${e.target.value}`);
+        
+         console.log(e.target.value);
+         alert(this.name);
+         alert(this.userID);
+        this.$router.push(`/detay/${e.target.value}`);
         this.$router.push({
           name: "DetailPage",
           params: {
