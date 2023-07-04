@@ -1,7 +1,16 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
 
-const app = createApp(App)
-app.use(router)
-app.mount('#app')
+import "@/assets/style.css";
+import appHeader from "@/components/Shared/appHeader"
+import appBookmarkList from "@/components/Shared/appBookmarkList"
+
+
+
+const app = createApp(App);
+app.component("appHeader",appHeader);
+app.component("appBookmarkList",appBookmarkList);
+app.use(router);
+
+app.mount("#app");
