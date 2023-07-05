@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "username": "asd",
+      "fullname": "asd",
+      "password": "U2FsdGVkX1/NB7lCVUsLNp/nSVMgpQh+VSCOVt+Zo6s=",
+      "id": 1
+    },
+    {
+      "username": "sdf",
+      "fullname": "ddsf",
+      "password": "U2FsdGVkX1/SHGLkbzyOVSwlrquP9te5HVsqC16G38o=",
+      "id": 2
+    },
+    {
+      "username": "sadf",
+      "fullname": "asdf",
+      "password": "U2FsdGVkX18CWgiiTdf+ADJvwuMQ6tYzEWon5P0l0XM=",
+      "id": 3
+    },
+    {
+      "username": "dogukan",
+      "fullname": "dogukan",
+      "password": "U2FsdGVkX19/5AbVfw/AkAOMi7wLj7xtBj1hBWs9BPM=",
+      "id": 4
+    },
+    {
+      "username": "dogukan",
+      "fullname": "doğukan göncü",
+      "password": "df413c74b72688e3ac4f3a37c5f6bf72882bc751",
+      "id": 5
+    }
+  ],
+  "bookmarks": [],
+  "categories": []
+}
