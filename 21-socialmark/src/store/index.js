@@ -1,10 +1,15 @@
 import {createStore} from "vuex";
 import createPersistedState from "vuex-persistedstate";
 
+
+
 export default createStore({
     state : {
         user: null,
         saltKey :"booklike123**?09"
+    },
+    logoutUser(state){
+        state.user = null;
     },
     mutations :{
         setUser(state,user){
@@ -21,6 +26,6 @@ export default createStore({
         },
         _saltKey : state => state.saltKey,
     },
-    plugins:[createPersistedState()]
+   plugins:[createPersistedState({key : 'user'})] 
 
 });
