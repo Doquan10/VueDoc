@@ -8,13 +8,17 @@ export default createStore({
         user: null,
         saltKey :"booklike123**?09"
     },
-    logoutUser(state){
-        state.user = null;
-    },
+   
     mutations :{
         setUser(state,user){
             console.log("user :>> ", user);
             state.user = user;
+        },
+        logoutUser(state){
+            state.user = null;
+        },
+        addToLikes(state, bookmarkId){
+            state.user.likes.push(bookmarkId);
         }
     },
     getters :{
@@ -24,6 +28,9 @@ export default createStore({
             delete user?.password;
             return user;
         },
+        _userLikes : state => state.user?.likes || [],
+        _userBookmarks : state => state.user?.bookmarks || [],
+        _currentUserId : state => state?.user?.id,
         _saltKey : state => state.saltKey,
     },
    plugins:[createPersistedState({key : 'user'})] 

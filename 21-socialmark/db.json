@@ -38,5 +38,24 @@
     }
   ],
   "bookmarks": [],
-  "categories": []
+  "categories": [
+    {
+      "id":1,
+      "name":"Vue.js"
+    },
+    {
+      "id":2,
+      "name":".net core"
+    },
+    {
+      "id":3,
+      "name":"Swift"
+    },
+    {
+      "id":4,
+    "name":"Java"
+  }
+
+  ],
+  "likes" :[]
 }
