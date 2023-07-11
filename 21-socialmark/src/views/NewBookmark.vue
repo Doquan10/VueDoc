@@ -10,7 +10,7 @@
         </select>
         <textarea v-model="userData.description" placeholder="Açıklama" class="input mb-3" cols="30" rows="10"></textarea>
         <div class="flex items-center justify-end gap-x-1">
-          <button @click="$router.push({ name: 'HomePage'})" class="secondary-button">İptal</button> v-model="userData.title"
+          <button @click="$router.push({ name: 'HomePage'})" class="secondary-button">İptal</button> 
           <button @click="onSave" class="default-button">Kaydet</button>
         </div>
       </div>

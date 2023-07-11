@@ -51,7 +51,7 @@
                 />
               </svg>
               Likes
-            </router-link> 
+            </router-link>
             <a @click="onLogout" href="#" class="menu-item">
               <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" class="fill-current mr-1" height="24" viewBox="0 0 24 24" width="24">
                 <g><path d="M0,0h24v24H0V0z" fill="none" /></g>
