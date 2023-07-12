@@ -1,47 +1,125 @@
 {
   "users": [
     {
-      "username": "gkandemir",
-      "fullname": "Gökhan Kandemir",
-      "password": "79a0af24ff17bb7a8a4a1176de203d9f566ee17d",
-      "id": 1
-    },
-    {
-      "username": null,
-      "fullname": null,
-      "password": "ba823cc419f4ad4c6cbad8045c0f677ecc3a24ce",
-      "id": 2
-    },
-    {
       "username": "dogukan",
       "fullname": "Doğukan Göncü",
       "password": "df413c74b72688e3ac4f3a37c5f6bf72882bc751",
       "id": 3
-    }
-  ],
-  "user_likes": [
+    },
     {
-      "userId": 1,
-      "bookmarkId": 1,
-      "id": 1
+      "username": "secil",
+      "fullname": "Seçil",
+      "password": "df413c74b72688e3ac4f3a37c5f6bf72882bc751",
+      "id": 4
     }
   ],
+  "user_likes": [],
   "user_bookmarks": [
     {
       "userId": 3,
-      "bookmarkId": 1,
+      "bookmarkId": 2,
       "id": 1
     }
   ],
   "bookmarks": [
     {
-      "title": "Vue Docs",
-      "url": "https://v3.vuejs.org",
+      "title": "dsfg",
+      "url": "sdfg",
+      "categoryId": 2,
+      "description": "dfsg",
+      "userId": 3,
+      "created_at": "2023-07-12T06:10:30.709Z",
+      "id": 2
+    },
+    {
+      "title": "asdfsadf",
+      "url": "sdaf",
+      "categoryId": 4,
+      "description": "asdf",
+      "userId": 3,
+      "created_at": "2023-07-12T06:19:48.311Z",
+      "id": 3
+    },
+    {
+      "title": "sadfsdf",
+      "url": "sadfsadf",
+      "categoryId": 5,
+      "description": "sadfsadf",
+      "userId": 3,
+      "created_at": "2023-07-12T06:19:58.975Z",
+      "id": 4
+    },
+    {
+      "title": "sadfsadf",
+      "url": "sadfasdf",
+      "categoryId": 2,
+      "description": "sadfasdf",
+      "userId": 3,
+      "created_at": "2023-07-12T06:20:25.598Z",
+      "id": 5
+    },
+    {
+      "title": "sadf",
+      "url": "sadf",
       "categoryId": 1,
-      "description": "Dünyanın en güzel framework'ü",
-      "userId": 1,
-      "created_at": "2021-08-26T18:57:24.821Z",
-      "id": 1
+      "description": "sdf",
+      "userId": 3,
+      "created_at": "2023-07-12T06:21:51.536Z",
+      "id": 6
+    },
+    {
+      "title": "sdfg",
+      "url": "sdfg",
+      "categoryId": 2,
+      "description": "dfsgdsfg",
+      "userId": 3,
+      "created_at": "2023-07-12T08:34:27.693Z",
+      "id": 7
+    },
+    {
+      "title": "fdsgdsf",
+      "url": "sdfgsd",
+      "categoryId": 1,
+      "description": "dfsgdfg",
+      "userId": 4,
+      "created_at": "2023-07-12T08:35:51.353Z",
+      "id": 8
+    },
+    {
+      "title": "asdf",
+      "url": "asdf",
+      "categoryId": 5,
+      "description": "asdfsad",
+      "userId": 3,
+      "created_at": "2023-07-12T08:38:14.328Z",
+      "id": 9
+    },
+    {
+      "title": "asdf",
+      "url": "asdf",
+      "categoryId": 2,
+      "description": "asdf",
+      "userId": 3,
+      "created_at": "2023-07-12T08:41:16.275Z",
+      "id": 10
+    },
+    {
+      "title": "asd",
+      "url": "asd",
+      "categoryId": 5,
+      "description": "asf",
+      "userId": 3,
+      "created_at": "2023-07-12T08:41:50.619Z",
+      "id": 11
+    },
+    {
+      "title": "sdfg",
+      "url": "sdfg",
+      "categoryId": 1,
+      "description": "dsfg",
+      "userId": 4,
+      "created_at": "2023-07-12T08:42:24.987Z",
+      "id": 12
     }
   ],
   "categories": [
