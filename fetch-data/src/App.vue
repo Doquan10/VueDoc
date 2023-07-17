@@ -1,10 +1,13 @@
 <template>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <div>
-
+    <input type="text" placeholder="age" class="form-control"  v-model="age" />
+    <input type="text" placeholder="name" class="form-control"  v-model="name" />
+    <button href="#" class="btn btn-success" @click="onSave">Submit</button>
         <div class="p-2 grid grid-cols-8 gap-4">
-          <div  v-for="item in post" :key="item.id" class="bg-white flex flex-col gap-x-3 rounded-md shadow-sm">
+          <div  v-for="item in persons" :key="item.id" class="bg-white flex flex-col gap-x-3 rounded-md shadow-sm">
             <div class="p-3">
-              <a href="#" class="hover:text-black font-bold text-l mb-1 text-gray-600 text-center">{{ (item.title).substring(0,20) }}</a>
+              <a href="#" class="hover:text-black font-bold text-l mb-1 text-gray-600 text-center">{{ item.name }}</a>
               <div class="flex items-center justify-center mt-2 gap-x-1">
                 <button class="like-btn group">
                   <svg xmlns="http://www.w3.org/2000/svg" class="fill-current group-hover:text-white" height="24" viewBox="0 0 24 24" width="24">
@@ -29,28 +32,30 @@
                 </div>
               </div>
               <div class="text-xs text-gray-400 mt-2 flex justify-between">
-                <a href="#" class="hover:text-black"> {{(item.url).substring(0,10)}} </a>
+                <a href="#" class="hover:text-black"> {{ item.age }} </a>
                 <span>14 Mart</span>
               </div>
             </div>
-            <div class="bg-red-200 p-1 text-red-900 text-center text-sm">{{item.id}}</div>
+            <div class="bg-red-200 p-1 text-red-900 text-center text-sm"></div>
           </div>
         </div>
       </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
-     post :[
-      fetch('https://jsonplaceholder.typicode.com/photos')
+      name:"",
+      age:"",
+
+      persons :[
+      fetch('https://10.10.11.99:45455/Person/GetPerson')
         .then(response => response.json())
-        .then(data => this.post = data)
+        .then(data => this.persons = data) 
     ]
-  
     }
-    
   },
  
   methods: {
@@ -59,7 +64,18 @@ export default {
     //     .then(response => response.json())
     //     .then(data => this.post = data)
     // }
-
+   
+    onSave() {
+      console.log(this.age);
+      const saveObject = {
+        age: this.age,
+        name: this.name
+      };
+      axios.post("https://10.10.11.99:45455/Person/PostPerson", saveObject).then(save_response => {
+        location.reload(save_response)
+      
+      });
+    },
   }
 }
 </script>
