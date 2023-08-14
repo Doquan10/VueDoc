@@ -13,7 +13,9 @@
     "@uppy/xhr-upload": "^3.3.1",
     "axios": "^1.4.0",
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "jszip": "^3.10.1",
+    "vue": "^3.2.13",
+    "vue-pdf": "^4.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
