@@ -1,13 +1,13 @@
 <template>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <div>
-    <input type="text" placeholder="age" class="form-control"  v-model="age" />
-    <input type="text" placeholder="name" class="form-control"  v-model="name" />
+    <input type="text" placeholder="Banka Adı" class="form-control"  v-model="BankName" />
+    <input type="text" placeholder="Oluşturan" class="form-control"  v-model="CreatedBy" />
     <button href="#" class="btn btn-success" @click="onSave">Submit</button>
         <div class="p-2 grid grid-cols-8 gap-4">
           <div  v-for="item in persons" :key="item.id" class="bg-white flex flex-col gap-x-3 rounded-md shadow-sm">
             <div class="p-3">
-              <a href="#" class="hover:text-black font-bold text-l mb-1 text-gray-600 text-center">{{ item.name }}</a>
+              <a href="#" class="hover:text-black font-bold text-l mb-1 text-gray-600 text-center">{{ item.bankName }}</a>
               <div class="flex items-center justify-center mt-2 gap-x-1">
                 <button class="like-btn group">
                   <svg xmlns="http://www.w3.org/2000/svg" class="fill-current group-hover:text-white" height="24" viewBox="0 0 24 24" width="24">
@@ -32,7 +32,7 @@
                 </div>
               </div>
               <div class="text-xs text-gray-400 mt-2 flex justify-between">
-                <a href="#" class="hover:text-black"> {{ item.age }} </a>
+                <a href="#" class="hover:text-black"> {{ item.createdDate }} </a>
                 <span>14 Mart</span>
               </div>
             </div>
@@ -47,11 +47,12 @@ import axios from "axios";
 export default {
   data() {
     return {
-      name:"",
-      age:"",
+      BankName:"",
+      CreatedBy:"",
+      //age:"",
 
       persons :[
-      fetch('https://10.10.11.99:45455/Person/GetPerson')
+      fetch('https://localhost:7013/api/Bank/GetAll')
         .then(response => response.json())
         .then(data => this.persons = data) 
     ]
@@ -66,14 +67,15 @@ export default {
     // }
    
     onSave() {
-      console.log(this.age);
+     // console.log(this.age);
       const saveObject = {
-        age: this.age,
-        name: this.name
+        BankName: this.BankName,
+        CreatedBy:this.CreatedBy
+       // name: this.name
       };
-      axios.post("https://10.10.11.99:45455/Person/PostPerson", saveObject).then(save_response => {
+      axios.post("https://localhost:7013/api/Bank/AddBank", saveObject).then(save_response => {
         location.reload(save_response)
-      
+       
       });
     },
   }
