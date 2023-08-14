@@ -21,7 +21,7 @@ const { title, counter, inc, alertMe } = Utils();
 //! UserApp
 const state = reactive({
   personal: {
-    name: "Felakettin",
+    name: "Dogukan",
     lname: null,
   },
   itemList: [],
