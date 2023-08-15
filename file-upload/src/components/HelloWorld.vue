@@ -2,7 +2,7 @@
   <div>
     <input type="file" @change="handleFileUpload"  />
     <button @click="uploadFile">Dosyayı Yükle</button>
-    <button @click="convertZip">Zip Çevir</button>
+    <button @click="convertZip">Zip Dosyasına Çevir</button>
   
   </div>
 </template>
